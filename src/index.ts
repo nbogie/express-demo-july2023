@@ -15,7 +15,7 @@ app.get<{ name?: string; age: number }>("/", (req, res) => {
         res.json("hello");
     }
 });
-app.get("/messages", (req, res) => {
+app.get("/messages", (_req, res) => {
     res.json(recordedMessages);
 });
 app.post<{ name?: string; age: number }>("/messages", (req, res) => {
